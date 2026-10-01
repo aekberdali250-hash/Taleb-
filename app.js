@@ -1,0 +1,1 @@
+fetch('/api/companies').then(r=>r.json()).then(a=>document.getElementById('list').innerHTML=a.map(c=>`<div class="company"><b>${c.name}</b><span class="badge">${c.type} · مفعّلة</span></div>`).join('')).catch(()=>document.getElementById('list').textContent='تعذر التحميل');
